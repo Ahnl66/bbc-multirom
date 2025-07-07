@@ -1,7 +1,8 @@
 # MultiROM: A low-cost BBC Master / Electron ROM cartridge
 
 ## This Fork
-This is fully based on the MultiROM project by [rhalkyard](https://github.com/rhalkyard/bbc-multirom/commits?author=rhalkyard)
+This is fully based on the MultiROM project by [rhalkyard](https://github.com/rhalkyard/bbc-multirom/commits?author=rhalkyard). 
+
 I added support in the tools for the SST39SF040A chip, this is cheaper and more widely available than the 010 version. It is bigger, but as the board and dipswitches are not updated, the additional storage is ignored. In order for this to work you need to connect the A17 and A18 pins on the chip to ground (pins 30 and 1 to pin 16). I also added a 3D printable case. 
 
 ## Original documentation
