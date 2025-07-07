@@ -94,7 +94,8 @@ ENDIF
 \ Check for valid flash chip
     TAX:JSR read_id
     CMP #&BF:BNE not_flash               \ Mfg ID &BF = SST
-    CPY #&B5:BNE unknown:BEQ is_flash    \ Product ID &B5 = SST39SF010
+    CPY #&B7:BEQ is_flash               \ Product ID &B7 = SST39SF040
+    CPY #&B5:BNE unknown:BEQ is_flash   \ Product ID &B5 = SST39SF010
 .not_flash
 \ read_id returns an invalid manufacturer ID of &00 if ID cannot be read
     CMP #0

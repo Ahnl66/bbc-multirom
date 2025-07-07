@@ -222,7 +222,9 @@ ENDIF
     LDA #'R':JMP print_type
 .checkflash
     CMP #&BF:BNE unknown
-    CPY #&B5:BNE unknown    
+    CPY #&B7:BEQ isflash    \ Product ID &B7 = SST39SF040
+    CPY #&B5:BNE unknown    \ Product ID &B5 = SST39SF010
+.isflash    
     LDA #'F':JMP print_type \ We only consider SST39SF010 (ID byte &BF &BE) to be Flash
 .ram
     LDA #'W':JMP print_type
