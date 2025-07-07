@@ -1,10 +1,13 @@
 # MultiROM: A low-cost BBC Master / Electron ROM cartridge
 
+## This Fork
+This is fully based on the MultiROM project by [rhalkyard](https://github.com/rhalkyard/bbc-multirom/commits?author=rhalkyard)
+I added support in the tools for the SST39SF040A chip, this is cheaper and more widely available than the 010 version. It is bigger, but as the board and dipswitches are not updated, the additional storage is ignored. In order for this to work you need to connect the A17 and A18 pins on the chip to ground (pins 30 and 1 to pin 16). I also added a 3D printable case. 
+
+## Original documentation
 There are plenty of perfectly-good options for building ROM cartridges for the BBC Master and Acorn Electron Plus One. However, I am a stubborn git and enjoy reinventing the wheel for fun, so I decided to come up with my own take on the concept.
 
 Rather than use the 27x and 28x series (E)EPROMS that were used Back In The Day, MultiROM uses a NOR Flash IC, the SST39SF010A. This part is much cheaper and more readily available than EEPROMs, but can still be obtained as a through-hole part for easy DIY assembly. Additionally, it offers more capacity (a whopping one megabit!), which MultiROM uses to store multiple ROM images on one cartridge, selected by DIP switches.
-
-UPDATE: I added support in the tools for the SST39SF040A chip, this is cheaper and more widely available than the 010 version. It is bigger, but as the board and dipswitches are not updated, the additional storage is ignored. In order for this to work you need to connect the A17 and A18 pins on the chip to ground (pins 30 and 1 to pin 16)
 
 The schematic and PCB layout were produced using [KiCad 7.0](https://www.kicad.org/).
 
